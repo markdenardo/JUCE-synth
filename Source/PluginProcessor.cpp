@@ -141,6 +141,18 @@ void TutorialSynthAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
 
+    for ( int i=0; i<synth.getNumVoices(); ++i)
+    {
+         if(auto voice = dynamic_cast<juce::SynthesiserVoice*>(synth.getVoice(i)))
+         {
+             //OSC controls
+             
+             //ASDR
+             
+             //LFO
+             
+         }
+    }
     
     synth.renderNextBlock(buffer, midiMessages, 0, buffer.getNumSamples());
 }
