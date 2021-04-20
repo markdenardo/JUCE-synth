@@ -9,31 +9,31 @@
 */
 
 #include "SynthVoice.h"
-bool canPlaySound (juce::SynthesiserSound* sound)
+bool SynthVoice::canPlaySound (juce::SynthesiserSound* sound)
+{
+    return dynamic_cast<juce::SynthesiserSound*>(sound) !=nullptr;
+}
+void SynthVoice::startNote (int midiNoteNumber, float velocity, juce::SynthesiserSound *sound, int currentPitchWheelPosition)
 {
     
 }
-void startNote (int midiNoteNumber, float velocity, juce::SynthesiserSound *sound, int currentPitchWheelPosition)
+void SynthVoice::stopNote (float velocity, bool allowTailOff)
 {
     
 }
-void stopNote (float velocity, bool allowTailOff)
+void SynthVoice::controllerMoved (int controllerNumber, int newControllerValue)
 {
     
 }
-void controllerMoved (int controllerNumber, int newControllerValue)
+void SynthVoice::pitchWheelMoved (int newPitchWheelValue)
 {
     
 }
-void pitchWheelMoved (int newPitchWheelValue)
+void SynthVoice::prepareToPlay (double sampleRate, int samplesPerBlock, int outputChannels)
 {
     
 }
-void prepareToPlay (double sampleRate, int samplesPerBlock, int outputChannels)
-{
-    
-}
-void renderNextBlock (juce::AudioBuffer< float > &outputBuffer, int startSample, int numSamples)
+void SynthVoice::renderNextBlock (juce::AudioBuffer< float > &outputBuffer, int startSample, int numSamples)
 {
     
 }
