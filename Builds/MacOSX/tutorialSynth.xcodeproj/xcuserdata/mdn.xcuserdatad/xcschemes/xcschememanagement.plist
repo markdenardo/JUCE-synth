@@ -7,22 +7,22 @@
 		<key>tutorialSynth - AU.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>2</integer>
 		</dict>
 		<key>tutorialSynth - All.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<key>tutorialSynth - Shared Code.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>4</integer>
 		</dict>
 		<key>tutorialSynth - Standalone Plugin.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>1</integer>
 		</dict>
 		<key>tutorialSynth - VST3.xcscheme_^#shared#^_</key>
 		<dict>
@@ -32,6 +32,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>6F2F884CFA3CDE43EA43B5FB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>75F80B83B721AC93EDB73691</key>
 		<dict>
 			<key>primary</key>

@@ -24,6 +24,10 @@ public:
     void prepareToPlay (double sampleRate, int samplesPerBlock, int outputChannels);
     void renderNextBlock (juce::AudioBuffer< float > &outputBuffer, int startSample, int numSamples) override;
 private:
+    juce::ADSR adsr;
+    juce::ADSR::Parameters adsrParams;
+    
+    
     juce::dsp::Oscillator<float> osc { [](float x) {return x/juce::MathConstants<float>::pi;}};
     juce::dsp::Gain<float>gain;
     bool isPrepared { false };
