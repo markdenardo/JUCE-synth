@@ -51,6 +51,8 @@ void SynthVoice::renderNextBlock (juce::AudioBuffer< float > &outputBuffer, int 
 {
     jassert(isPrepared);
     
+    synthBuffer.setSize (outputBuffer.getNumChannels(),numSamples,false,false,true);
+    
     juce::dsp::AudioBlock<float> audioBlock {outputBuffer};
     osc.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
     gain.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
