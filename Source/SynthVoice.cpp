@@ -51,11 +51,17 @@ void SynthVoice::renderNextBlock (juce::AudioBuffer< float > &outputBuffer, int 
 {
     jassert(isPrepared);
     
+    if (! isVoiceActive())
+        return;
+    
     synthBuffer.setSize (outputBuffer.getNumChannels(),numSamples,false,false,true);
+    synthBuffer.clear();
     
     juce::dsp::AudioBlock<float> audioBlock {outputBuffer};
     osc.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
     gain.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
     
     adsr.applyEnvelopeToBuffer(outputBuffer, startSample, numSamples);
+    
+    for (int channel =0; channel < outputBuffer.getNumChannels(); ++channel)
 }
